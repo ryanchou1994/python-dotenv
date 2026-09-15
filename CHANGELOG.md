@@ -9,6 +9,8 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Fixed
 
+- `load_dotenv` now finds a current-directory `.env` when called directly as a
+  `threading.Thread` target, fixing [#531] reported by [@kazzmir]
 - An unquoted empty value followed by an inline comment (e.g. `KEY= # comment`) is now parsed as an empty string instead of the comment text by [@Noethix55555] in [#663]
 
 ## [1.2.3] - 2026-08-16
@@ -431,6 +433,7 @@ os.PathLike]` instead of just `os.PathLike` (#347 by [@bbc2]).
 [#454]: https://github.com/theskumar/python-dotenv/issues/454
 [#474]: https://github.com/theskumar/python-dotenv/issues/474
 [#523]: https://github.com/theskumar/python-dotenv/issues/523
+[#531]: https://github.com/theskumar/python-dotenv/issues/531
 [#553]: https://github.com/theskumar/python-dotenv/issues/553
 [#569]: https://github.com/theskumar/python-dotenv/issues/569
 [#583]: https://github.com/theskumar/python-dotenv/issues/583
@@ -483,6 +486,7 @@ os.PathLike]` instead of just `os.PathLike` (#347 by [@bbc2]).
 [@jadutter]: https://github.com/jadutter
 [@jankislinger]: https://github.com/jankislinger
 [@jctanner]: https://github.com/jctanner
+[@kazzmir]: https://github.com/kazzmir
 [@larsks]: https://github.com/larsks
 [@lsmith77]: https://github.com/lsmith77
 [@matthewfranglen]: https://github.com/matthewfranglen
